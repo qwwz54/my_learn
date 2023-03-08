@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .big{
+            display: flex;
+        }
+        .big>div{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 th:text="${name}">欢迎您访问静态页面 HTML</h1>
+<!--    <img src="1.jpg" alt="" width="200px" height="200px"/>-->
+
+    <div class = "big">
+        <div th:each="news:${list}">
+            <h3 th:text="${news.title}"></h3>
+            <img th:src="${news.img}" alt="" width="200px" height="200px">
+        </div>
+    </div>
+</body>
+</html>
